@@ -1,12 +1,12 @@
 # Emopjigrama Crucigrama 🎯🧩
 
-Juego web en español donde cada pista es un conjunto de emojis y cada respuesta se coloca en una cuadrícula tipo crucigrama.
+Juego web en español donde cada pista es un conjunto de emojis y cada respuesta forma parte de un crucigrama completo.
 
-## Categorías incluidas
-- Juegos
-- Música
-- Cultura
-- Cine
+## Qué incluye
+- Crucigramas completos por categoría.
+- Categorías: Juegos, Música, Cultura y Cine.
+- Pistas en emojis (horizontal y vertical).
+- Botones para comprobar, mostrar solución completa y limpiar.
 
 ## Ejecutar en local
 ```bash
