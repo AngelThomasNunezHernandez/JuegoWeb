@@ -3,45 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emopjigrama Crucigrama</title>
+  <title>Emopjigrama por Categorías</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="app">
     <header>
-      <h1>🧩 Emopjigrama + Crucigrama</h1>
-      <p>Resuelve palabras a partir de emojis y complétalas en el crucigrama.</p>
+      <h1>🎯 Emopjigrama</h1>
+      <p>Adivina la palabra o frase a partir de emojis. Elige una categoría y prueba tus conocimientos.</p>
     </header>
 
     <section class="controls">
       <label for="category">Categoría:</label>
       <select id="category"></select>
-      <button id="loadBtn" type="button">Cargar crucigrama</button>
+      <button id="nextBtn" type="button">Nuevo reto</button>
     </section>
 
-    <section class="game-layout">
-      <div>
-        <h2 id="categoryTitle"></h2>
-        <div id="crossword" class="crossword" aria-label="Crucigrama"></div>
+    <section class="card" aria-live="polite">
+      <h2 id="categoryTitle"></h2>
+      <p id="emojiClue" class="emoji"></p>
+      <p id="hint" class="hint"></p>
+    </section>
+
+    <section class="answer">
+      <label for="guess">Tu respuesta:</label>
+      <input id="guess" type="text" autocomplete="off" placeholder="Escribe tu respuesta" />
+      <div class="actions">
+        <button id="checkBtn" type="button">Comprobar</button>
+        <button id="showBtn" type="button" class="secondary">Mostrar respuesta</button>
       </div>
-
-      <aside class="clues">
-        <h3>Pistas en emojis</h3>
-        <ol id="cluesList"></ol>
-      </aside>
+      <p id="feedback" class="feedback"></p>
     </section>
-
-    <section class="actions">
-      <button id="checkBtn" type="button">Comprobar crucigrama</button>
-      <button id="revealBtn" type="button" class="secondary">Mostrar solución</button>
-      <button id="clearBtn" type="button" class="secondary">Limpiar</button>
-    </section>
-
-    <p id="feedback" class="feedback"></p>
 
     <section class="scoreboard">
       <h3>Marcador</h3>
-      <p>Crucigramas resueltos: <span id="wins">0</span></p>
+      <p>Aciertos: <span id="wins">0</span></p>
       <p>Intentos: <span id="attempts">0</span></p>
     </section>
   </main>
