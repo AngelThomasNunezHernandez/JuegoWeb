@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emopjigrama por Categorías</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🎯 Emopjigrama</h1>
+      <p>Adivina la palabra o frase a partir de emojis. Elige una categoría y prueba tus conocimientos.</p>
+    </header>
+
+    <section class="controls">
+      <label for="category">Categoría:</label>
+      <select id="category"></select>
+      <button id="nextBtn" type="button">Nuevo reto</button>
+    </section>
+
+    <section class="card" aria-live="polite">
+      <h2 id="categoryTitle"></h2>
+      <p id="emojiClue" class="emoji"></p>
+      <p id="hint" class="hint"></p>
+    </section>
+
+    <section class="answer">
+      <label for="guess">Tu respuesta:</label>
+      <input id="guess" type="text" autocomplete="off" placeholder="Escribe tu respuesta" />
+      <div class="actions">
+        <button id="checkBtn" type="button">Comprobar</button>
+        <button id="showBtn" type="button" class="secondary">Mostrar respuesta</button>
+      </div>
+      <p id="feedback" class="feedback"></p>
+    </section>
+
+    <section class="scoreboard">
+      <h3>Marcador</h3>
+      <p>Aciertos: <span id="wins">0</span></p>
+      <p>Intentos: <span id="attempts">0</span></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
