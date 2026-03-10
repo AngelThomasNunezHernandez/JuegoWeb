@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emopjigrama Crucigrama</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🧩 Emopjigrama + Crucigrama</h1>
+      <p>Resuelve palabras a partir de emojis y complétalas en el crucigrama.</p>
+    </header>
+
+    <section class="controls">
+      <label for="category">Categoría:</label>
+      <select id="category"></select>
+      <button id="loadBtn" type="button">Cargar crucigrama</button>
+    </section>
+
+    <section class="game-layout">
+      <div>
+        <h2 id="categoryTitle"></h2>
+        <div id="crossword" class="crossword" aria-label="Crucigrama"></div>
+      </div>
+
+      <aside class="clues">
+        <h3>Pistas en emojis</h3>
+        <ol id="cluesList"></ol>
+      </aside>
+    </section>
+
+    <section class="actions">
+      <button id="checkBtn" type="button">Comprobar crucigrama</button>
+      <button id="revealBtn" type="button" class="secondary">Mostrar solución</button>
+      <button id="clearBtn" type="button" class="secondary">Limpiar</button>
+    </section>
+
+    <p id="feedback" class="feedback"></p>
+
+    <section class="scoreboard">
+      <h3>Marcador</h3>
+      <p>Crucigramas resueltos: <span id="wins">0</span></p>
+      <p>Intentos: <span id="attempts">0</span></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
